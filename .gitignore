@@ -20,6 +20,9 @@ target/
 .settings
 .springBeans
 .sts4-cache
+/data
+*.mv.db
+*.trace.db
 
 ### NetBeans ###
 /nbproject/private/

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/trips")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3001")
 public class TripController {
 
     private final TripService tripService;
@@ -44,4 +44,13 @@ public class TripController {
                               @RequestBody ExpenseRequest request) {
         return expenseService.addExpense(id, request);
     }
+
+    @PutMapping("/expenses/{expenseId}")
+    public Expense updateExpense(
+            @PathVariable Long expenseId,
+            @RequestBody Expense updatedExpense) {
+
+        return expenseService.updateExpense(expenseId, updatedExpense);
+    }
+
 }
