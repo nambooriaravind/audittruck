@@ -50,4 +50,10 @@ public class ExpenseService {
         return expenseRepository.save(existing);
     }
 
+    public void deleteExpense(Long expenseId)
+    {
+        expenseRepository.deleteById(expenseId);
+    }
+
+
 }
