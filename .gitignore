@@ -23,6 +23,7 @@ target/
 /data
 *.mv.db
 *.trace.db
+application.properties
 
 ### NetBeans ###
 /nbproject/private/

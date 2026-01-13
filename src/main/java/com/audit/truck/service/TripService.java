@@ -36,4 +36,12 @@ public class TripService {
         return tripRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Trip not found"));
     }
+
+    public void deleteTrip(Long id) {
+        Trip trip = tripRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Trip not found"));
+
+        tripRepository.delete(trip);
+    }
+
 }

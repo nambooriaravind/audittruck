@@ -57,5 +57,11 @@ public class TripController {
         expenseService.deleteExpense(id);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteTrip(@PathVariable Long id) {
+        tripService.deleteTrip(id);
+    }
+
+
 
 }
